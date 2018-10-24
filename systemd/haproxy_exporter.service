@@ -1,0 +1,9 @@
+[Unit]
+Description=haproxy Exporter
+
+[Service]
+EnvironmentFile=/etc/default/haproxy_exporter
+ExecStart=/usr/bin/haproxy_exporter $OPTIONS
+
+[Install]
+WantedBy=multi-user.target
